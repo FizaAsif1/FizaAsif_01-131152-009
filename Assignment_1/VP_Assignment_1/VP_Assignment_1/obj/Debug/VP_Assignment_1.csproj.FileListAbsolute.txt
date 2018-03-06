@@ -1,0 +1,6 @@
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\bin\Debug\VP_Assignment_1.exe.config
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\bin\Debug\VP_Assignment_1.exe
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\bin\Debug\VP_Assignment_1.pdb
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\obj\Debug\VP_Assignment_1.exe
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\obj\Debug\VP_Assignment_1.pdb
+C:\Users\Xnote\Documents\Visual Studio 2013\Projects\VP_Assignment_1\VP_Assignment_1\obj\Debug\VP_Assignment_1.csprojResolveAssemblyReference.cache
