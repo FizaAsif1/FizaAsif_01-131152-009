@@ -1,0 +1,12 @@
+01-131152-009 fiza 6 3.85 BSE Bahria
+01-131152-001 hamza 6 3.7 BSE Bahria
+01-131152-002 maryam 6 3.8 BSE Bahria
+01-131152-013 sana 6 3.9 BSE Bahria
+01-131152-015 fiza 5 3.78 BCE Bahria
+01-131152-016 rabia 5 3.92 BSE Bahria
+01-131152-020 rida 5 4.0 BCE Bahria
+01-131152-006 sana 5 2.5 BSE Bahria
+01-131152-019 mishal 4 3.5 BCE Bahria
+01-131152-023 urooj 4 3.87 BSE Bahria
+01-131152-010 arooj 4 2.6 BCE Bahria
+01-131152-024 nawehya 4 4.0 BSE Bahria
