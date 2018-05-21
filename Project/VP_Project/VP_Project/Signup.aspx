@@ -14,17 +14,12 @@
 			<div class="agileinfo_signin">
 			<h3>Sign Up</h3>
 				<form action="#" method="post">
-					<input type="text" name="Name" placeholder="Your Name" required=""> 
-					<input type="email" name="Email" placeholder="Your Email" required=""> 
-					<input type="tel" name="tel" placeholder="Mobile" required=""> 
-					<input type="password" name="Password" placeholder="Password" required=""> 
-					<input type="password" name="Password" placeholder="Confirm Password" required=""> 
-					<div class="signin-rit">
-						<span class="agree-checkbox">
-							<label class="checkbox"><input type="checkbox" name="checkbox">I agree to your <a class="w3layouts-t" href="terms.html" target="_blank">Terms of Use</a> and <a class="w3layouts-t" href="privacy.html" target="_blank">Privacy Policy</a></label>
-						</span>
-					</div>
-					<input type="submit" value="Sign Up">
+                    <asp:TextBox ID="txtName" type="text" name="Name" placeholder="Your Name" required="" runat="server"></asp:TextBox>
+					<asp:TextBox ID="txtEmail" type="email" name="Email" placeholder="Your Email" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtTel" type="tel" name="tel" placeholder="Mobile" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" type="password" name="Password" placeholder="Password" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPasswordConfirm" type="password" name="Password" placeholder="Confirm Password" required="" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnSignup" runat="server" Text="Sign Up" value="Sign Up" OnClick="btnSignup_Click" />
 				</form>
 			</div>
 		</div>

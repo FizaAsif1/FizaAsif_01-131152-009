@@ -14,16 +14,15 @@
 			<div class="agileinfo_signin">
 			<h3>Sign In</h3>
 				<form action="#" method="post">
-					<input type="email" name="Your Email" placeholder="Your Email" required=""> 
-					<input type="password" name="Password" placeholder="Password" required=""> 
-					<input type="submit" value="Sign In">
+                    <asp:TextBox ID="txtEmail" type="email" name="Email" placeholder="Your Email" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" type="password" name="Password" placeholder="Password" required="" runat="server"></asp:TextBox>
+					<asp:Button ID="btnSignin" runat="server" Text="Sign In" value="Sign In" OnClick="btnSignin_Click" />
+
 					<div class="forgot-grid">
-						<label class="checkbox"><input type="checkbox" name="checkbox">Remember me</label>
-						<div class="forgot">
-							<a href="#" data-toggle="modal" data-target="#myModal2">Forgot Password?</a>
-						</div>
+						
+						
 						<!-- Modal -->
-						<div class="modal fade" id="myModal2" role="dialog">
+						<%--<div class="modal fade" id="myModal2" role="dialog">
 							<div class="modal-dialog">
 							<!-- Modal content-->
 							<div class="modal-dialog modal-lg">
@@ -40,7 +39,7 @@
 								</div>
 							</div>
 							</div>
-						</div>
+						</div>--%>
 						<div class="clearfix"> </div>
 					</div>
 				</form>

@@ -11,7 +11,25 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+       
+
+        protected void btnSignup_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text.ToString() == txtPasswordConfirm.Text.ToString())
+            {
+                string name = txtName.Text.ToString();
+                string email = txtEmail.Text.ToString();
+                string number = txtTel.Text.ToString();
+                string password = txtPassword.Text.ToString();
+                string formattedValueString = "'" + name + "','" + email + "','" + number + "','" + password + "'";
+
+                DatabaseOps.ConnObject.insertRecord(formattedValueString, "RegisteredUsers");
+            }
+            else
+                Response.Write("Password Donot Match");
         }
     }
 }

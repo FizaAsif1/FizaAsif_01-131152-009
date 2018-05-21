@@ -391,7 +391,7 @@
 												</optgroup>
 			            </select>
 				</div>
-				<div class="browse-category ads-list">
+				<%--<div class="browse-category ads-list">
 					<label>Browse Categories</label>
 					<select class="selectpicker show-tick" data-live-search="true">
 					  <option data-tokens="Mobiles">All</option>
@@ -408,7 +408,7 @@
 					  <option data-tokens="Jobs">Jobs</option>
 					  <option data-tokens="Real Estate">Real Estate</option>
 					</select>
-				</div>
+				</div>--%>
 				<div class="search-product ads-list">
 					<label>Search for a specific product</label>
 					<div class="search">
@@ -426,7 +426,7 @@
 				</div>
 				<div class="clearfix"></div>
 			</div>
-			<div class="all-categories">
+			<%--<div class="all-categories">
 				<h3> Select your category and find the perfect ad</h3>
 				<ul class="all-cat-list">
 					<li><a href="mobiles.html">Mobiles <span class="num-of-ads">(5,78,076)</span></a></li>
@@ -440,7 +440,7 @@
 					<li><a href="services.html">Services   <span class="num-of-ads">(2,15,895)</span></a></li>
 					<li><a href="cars.html">Cars   <span class="num-of-ads">(2,15,306)</span></a></li>
 				</ul>
-			</div>
+			</div>--%>
 			<div class="ads-grid">
 				<div class="side-bar col-md-3">
 					<div class="search-hotel">
@@ -451,7 +451,7 @@
 					</form>
 				</div>
 				
-				<div class="range">
+				<%--<div class="range">
 					<h3 class="agileits-sear-head">Price range</h3>
 							<ul class="dropdown-menu6">
 								<li>
@@ -478,7 +478,7 @@
 
 							</script>
 							
-				</div>
+				</div>--%>
 				<div class="w3ls-featured-ads">
 					<h2 class="sear-head fer">Featured Ads</h2>
 					<div class="w3l-featured-ad">
