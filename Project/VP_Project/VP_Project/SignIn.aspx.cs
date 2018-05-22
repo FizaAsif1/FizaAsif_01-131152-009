@@ -11,7 +11,7 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnSignin_Click(sender, e);
+           // btnSignin_Click(sender, e);
         }
 
         protected void btnSignin_Click(object sender, EventArgs e)

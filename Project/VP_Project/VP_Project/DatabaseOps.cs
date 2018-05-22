@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Web;
+using System.Data;
 
 namespace VP_Project
 {
@@ -60,8 +61,6 @@ namespace VP_Project
             {
                 throw ex;
             }
-
-            return false;
         }
 
 
@@ -86,8 +85,27 @@ namespace VP_Project
                 throw ex;
             }
 
-            return false;
+        }
 
+        public DataTable getAllAds()
+        {
+            DataTable mobileDataTable = new DataTable();
+            try
+            {
+                if (IsConnect())
+                {
+                    string query = "select * from mobile_ads;";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, sqlconnection);
+                    sda.Fill(mobileDataTable);
+                    return mobileDataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return mobileDataTable;
         }
 
     }
