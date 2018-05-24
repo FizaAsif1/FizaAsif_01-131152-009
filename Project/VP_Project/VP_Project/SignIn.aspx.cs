@@ -22,7 +22,7 @@ namespace VP_Project
             //string password = txtPassword.Text.ToString();
             string formattedString = "email='" + email + "' and password='"+ password + "'";
 
-            if (DatabaseOps.ConnObject.authenticateUser("[dbo].[RegisteredUsers]", formattedString))
+            if (DatabaseOps.ConnObject.authenticateUser( formattedString))
             {
                 Session["username"] = "Fiza";
                 Response.Redirect("home.aspx");

@@ -13,32 +13,45 @@
 	</div>
 	<!-- //breadcrumbs -->
 	<!-- Submit Ad -->
+<%--    <!-- sign up form -->
+	 <section>
+		<div id="agileits-sign-in-page" class="sign-in-wrapper">
+			<div class="agileinfo_signin">
+			<h3>Sign Up</h3>
+				<form action="#" method="post">
+                    <asp:TextBox ID="txtName" type="text" name="Name" placeholder="Your Name" required="" runat="server"></asp:TextBox>
+					<asp:TextBox ID="txtEmail" type="email" name="Email" placeholder="Your Email" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtTel" type="tel" name="tel" placeholder="Mobile" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPassword" type="password" name="Password" placeholder="Password" required="" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtPasswordConfirm" type="password" name="Password" placeholder="Confirm Password" required="" runat="server"></asp:TextBox>
+                    <asp:Button ID="btnSignup" runat="server" Text="Sign Up" value="Sign Up" OnClick="btnSignup_Click" />
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- //sign up form -->--%>
+    <section>
+
+    </section>
 	<div class="submit-ad main-grid-border">
 		<div class="container">
 			<h2 class="w3-head">Post an Ad</h2>
 			<div class="post-ad-form">
 				<form>
-					<label>Select Category <span>*</span></label>
-					<select class="">
-					  <option>Select Category</option>
-					  <option>Mobiles</option>
-					  <option>Electronics and Appliances</option>
-					  <option>Cars</option>
-					  <option>Bikes</option>
-					  <option>Furniture</option>
-					  <option>Pets</option>
-					  <option>Books, Sports and hobbies</option>
-					  <option>Fashion</option>
-					  <option>Kids</option>
-					  <option>Services</option>
-					  <option>Real, Estate</option>
-					</select>
+					<label>Select Brand<span>*</span></label>
+                    <asp:DropDownList ID="brand" runat="server" >
+                        <asp:ListItem Selected="True">Apple</asp:ListItem>
+                        <asp:ListItem>Samsung</asp:ListItem>
+                        <asp:ListItem>LG</asp:ListItem>
+                    </asp:DropDownList>
 					<div class="clearfix"></div>
 					<label>Ad Title <span>*</span></label>
-					<input type="text" class="phone" placeholder="">
+                    <asp:TextBox ID="adTitle" type="text" placeholder="Enter Ad Title" required="" runat="server"></asp:TextBox>
+
 					<div class="clearfix"></div>
 					<label>Ad Description <span>*</span></label>
-					<textarea class="mess" placeholder="Write few lines about your product"></textarea>
+                    <textarea id="TextArea1" cols="20" rows="2" class="mess" placeholder="Write few lines about your product" required="" runat="server" ></textarea>
+
 					<div class="clearfix"></div>
 				<div class="upload-ad-photos">
 				<label>Photos for your ad :</label>	
@@ -67,14 +80,17 @@
 				</div>
 					<div class="personal-details">
 					<form>
-						<label>Your Name <span>*</span></label>
-						<input type="text" class="name" placeholder="">
+						<label>Product Price <span>*</span></label>
+                        <asp:TextBox ID="productPrice" type="text" placeholder="Enter Price (PKR)" required="" runat="server"></asp:TextBox>
+
 						<div class="clearfix"></div>
-						<label>Your Mobile No <span>*</span></label>
-						<input type="text" class="phone" placeholder="">
+						<label>Product Condition<span>*</span></label>
+                        <asp:TextBox ID="condition" type="text" placeholder="Describe Product Condition In 1 Word" required="" runat="server"></asp:TextBox>
+
 						<div class="clearfix"></div>
-						<label>Your Email Address<span>*</span></label>
-						<input type="text" class="email" placeholder="">
+						<label>Location<span>*</span></label>
+                        <asp:TextBox ID="location" type="text" placeholder="Enter Location" required="" runat="server"></asp:TextBox>
+
 						<div class="clearfix"></div>
 						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.html" target="_blank">Terms of Use </a> and <a href="privacy.html" target="_blank">Privacy Policy</a></p>
 					<input type="submit" value="Post">					

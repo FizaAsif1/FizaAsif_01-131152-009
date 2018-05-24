@@ -14,8 +14,6 @@ namespace VP_Project
           //  btnSignup_Click(sender, e);
         }
 
-       
-
         protected void btnSignup_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text.ToString() == txtPasswordConfirm.Text.ToString())
@@ -26,7 +24,11 @@ namespace VP_Project
                 string password = txtPassword.Text.ToString();
                 string formattedValueString = "'" + name + "','" + email + "','" + number + "','" + password + "'";
 
-                DatabaseOps.ConnObject.insertRecord(formattedValueString, "RegisteredUsers");
+                if(DatabaseOps.ConnObject.addUser(formattedValueString))
+                {
+                    Session["username"] = name ;
+                    Response.Redirect("home.aspx");
+                }
             }
             else
                 Response.Write("Password Donot Match");

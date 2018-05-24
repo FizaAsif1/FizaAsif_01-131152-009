@@ -69,7 +69,6 @@
     <Content Include="AllAds.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="Mobiles.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -108,13 +107,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Mobiles.aspx.cs">
-      <DependentUpon>Mobiles.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Mobiles.aspx.designer.cs">
-      <DependentUpon>Mobiles.aspx</DependentUpon>
     </Compile>
     <Compile Include="PostAd.aspx.cs">
       <DependentUpon>PostAd.aspx</DependentUpon>

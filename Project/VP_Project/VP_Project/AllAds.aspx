@@ -465,6 +465,28 @@
 							</script>
 							
 				</div>
+				<div class="w3-brand-select">
+					<h3 class="agileits-sear-head">Brand name</h3>
+					  <select class="selectpicker" data-live-search="true">
+					  <option data-tokens="All">All</option>
+					  <option data-tokens="Asus">Asus</option>
+					  <option data-tokens="Black Berry">Black Berry</option>
+					  <option data-tokens="HTC">HTC</option>
+					  <option data-tokens="Intex">Intex</option>
+					  <option data-tokens="iPhone">iPhone</option>
+					  <option data-tokens="Karbonn">Karbonn</option>
+					  <option data-tokens="Lava">Lava</option>
+					  <option data-tokens="Lenovo">Lenovo</option>
+					  <option data-tokens="LG">LG</option>
+					  <option data-tokens="Mi">Mi</option>
+					  <option data-tokens="Micromax">Micromax</option>
+					  <option data-tokens="Motorola">Motorola</option>
+					  <option data-tokens="Nokia">Nokia</option>
+					  <option data-tokens="Samsung">Samsung</option>
+					  <option data-tokens="Sony">Sony</option>
+					  <option data-tokens="Other Mobiles">Other Mobiles</option>
+					</select>
+				</div>
 				
 				</div>
 				<div class="agileinfo-ads-display col-md-9">
@@ -524,14 +546,14 @@
 									</section>
 									<section class="list-right">
 									<span class="date"><%# Eval("date") %></span>
-									<span class="cityname"><%# Eval("city") %></span>
+									<span class="cityname"><%# Eval("location") %></span>
 									</section>
 									<div class="clearfix"></div>
 									</li> 
 								</a>
 
-                                </ItemTemplate>
-                                </asp:ListView>
+                            </ItemTemplate>
+                            </asp:ListView>
 								
 							</ul>
 						</div>

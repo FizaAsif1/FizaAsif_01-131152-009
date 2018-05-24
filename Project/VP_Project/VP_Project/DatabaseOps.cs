@@ -41,13 +41,13 @@ namespace VP_Project
             return true;
         }
 
-        public bool insertRecord(string values, string tableName)
+        public bool addUser(string values)
         {
             try
             {
                 if (IsConnect())
                 {
-                    string query = "insert into " + tableName + " values (" + values + ");";
+                    string query = "insert into RegisteredUsers values (" + values + ");";
                     SqlCommand cmd = new SqlCommand(query, sqlconnection);
 
                     string output = cmd.ExecuteNonQuery().ToString();
@@ -64,13 +64,13 @@ namespace VP_Project
         }
 
 
-        public bool authenticateUser(string tableName, string condition)
+        public bool authenticateUser( string condition)
         {
             try
             {
                 if (IsConnect())
                 {
-                    string query = "select * from " + tableName + " where " + condition + ";";
+                    string query = "select * from [dbo].[RegisteredUsers] where " + condition + ";";
                     SqlCommand cmd = new SqlCommand(query, sqlconnection);
 
                     string output = cmd.ExecuteNonQuery().ToString();
