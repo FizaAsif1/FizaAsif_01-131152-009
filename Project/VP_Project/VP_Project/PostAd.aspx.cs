@@ -11,8 +11,13 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           // if (Session["username"] == null)
-               // Response.Redirect("~/PostAd.aspx");
+           if (Session["user"] == null)
+                Response.Redirect("~/SignIn.aspx");
+        }
+
+        protected void postAdButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

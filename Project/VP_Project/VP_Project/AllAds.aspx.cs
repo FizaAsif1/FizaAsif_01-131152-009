@@ -14,5 +14,12 @@ namespace VP_Project
             mobileList.DataSource = DatabaseOps.ConnObject.getAllAds();
             mobileList.DataBind();
         }
+
+        protected void searchButton_Click(object sender, EventArgs e)
+        {
+            if (DatabaseOps.ConnObject.IsConnect())
+            { }
+
+        }
     }
 }

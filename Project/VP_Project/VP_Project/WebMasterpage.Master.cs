@@ -11,7 +11,29 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["user"]==null)
+            {
+                signoutButton.Visible = false;
+                signinButton.Visible = true;
+                nameLabel.Text = "";
+            }
+            else
+            {
+                signoutButton.Visible = true;
+                signinButton.Visible = false;
+                nameLabel.Text = DatabaseOps.ConnObject.getUsername(Session["user"].ToString());
+            }
+        }
 
+        protected void signoutButton_Click(object sender, EventArgs e)
+        {
+            Session["user"] = null;
+            Response.Redirect("~/home.aspx");
+        }
+
+        protected void signinButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/signin.aspx");
         }
     }
 }

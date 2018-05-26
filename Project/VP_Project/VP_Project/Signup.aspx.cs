@@ -22,11 +22,13 @@ namespace VP_Project
                 string email = txtEmail.Text.ToString();
                 string number = txtTel.Text.ToString();
                 string password = txtPassword.Text.ToString();
-                string formattedValueString = "'" + name + "','" + email + "','" + number + "','" + password + "'";
+                string userDetails = "\n\nDear " + name + "!\n\nEmail: " + email + "\nPassword: " + password + "\n\n";
 
-                if(DatabaseOps.ConnObject.addUser(formattedValueString))
+                if(DatabaseOps.ConnObject.addUser(userDetails))
                 {
                     Session["username"] = name ;
+                    NotifyCustomer notification = new NotifyCustomer();
+                    notification.sendEmailNotification(userDetails,email);
                     Response.Redirect("home.aspx");
                 }
             }

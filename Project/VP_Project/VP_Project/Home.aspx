@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="VP_Project.Home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="VP_Project.Home" EnableEventValidation="false" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
@@ -8,7 +8,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="searchBar" runat="server">
+    <asp:TextBox ID="searchTextBox" type="text" placeholder="Search Product" runat="server"></asp:TextBox>
+    <asp:Button ID="searchButton" runat="server" Text="Search"  type="submit" class="btn btn-default" aria-label="Left Align" OnClick="searchButton_Click" />
+		<i class="fa fa-search" aria-hidden="true"> </i>
+    
+
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="body" runat="server">
     <!-- Slider -->
 		<div class="slider">
 			<ul class="rslides" id="slider">

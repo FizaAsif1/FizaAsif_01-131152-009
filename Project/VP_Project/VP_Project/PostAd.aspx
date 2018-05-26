@@ -1,35 +1,25 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="PostAd.aspx.cs" Inherits="VP_Project.PostAd" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="PostAd.aspx.cs" Inherits="VP_Project.PostAd" EnableEventValidation="false"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Post Ad
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+
+<asp:Content ID="Content3" ContentPlaceHolderID="searchBar" runat="server">
+</asp:Content>
+
+
+<asp:Content ID="Content4" ContentPlaceHolderID="body" runat="server">
     <!-- breadcrumbs -->
 	<div class="w3layouts-breadcrumbs text-center">
 		<div class="container">
-			<span class="agile-breadcrumbs"><a href="index.html"><i class="fa fa-home home_1"></i></a> / <span>Post your Ad</span></span>
+			<span class="agile-breadcrumbs"><a href="home.aspx"><i class="fa fa-home home_1"></i></a> / <span>Post your Ad</span></span>
 		</div>
 	</div>
 	<!-- //breadcrumbs -->
 	<!-- Submit Ad -->
-<%--    <!-- sign up form -->
-	 <section>
-		<div id="agileits-sign-in-page" class="sign-in-wrapper">
-			<div class="agileinfo_signin">
-			<h3>Sign Up</h3>
-				<form action="#" method="post">
-                    <asp:TextBox ID="txtName" type="text" name="Name" placeholder="Your Name" required="" runat="server"></asp:TextBox>
-					<asp:TextBox ID="txtEmail" type="email" name="Email" placeholder="Your Email" required="" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txtTel" type="tel" name="tel" placeholder="Mobile" required="" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txtPassword" type="password" name="Password" placeholder="Password" required="" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="txtPasswordConfirm" type="password" name="Password" placeholder="Confirm Password" required="" runat="server"></asp:TextBox>
-                    <asp:Button ID="btnSignup" runat="server" Text="Sign Up" value="Sign Up" OnClick="btnSignup_Click" />
-				</form>
-			</div>
-		</div>
-	</section>
-	<!-- //sign up form -->--%>
+
     <section>
 
     </section>
@@ -54,9 +44,9 @@
 
 					<div class="clearfix"></div>
 				<div class="upload-ad-photos">
-				<label>Photos for your ad :</label>	
+				<label>Photo for your ad :</label>	
 					<div class="photos-upload-view">
-						<form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
+						<form id="upload" enctype="multipart/form-data">
 
 						<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
 
@@ -93,7 +83,7 @@
 
 						<div class="clearfix"></div>
 						<p class="post-terms">By clicking <strong>post Button</strong> you accept our <a href="terms.html" target="_blank">Terms of Use </a> and <a href="privacy.html" target="_blank">Privacy Policy</a></p>
-					<input type="submit" value="Post">					
+                        <asp:Button ID="postAdButton" type="submit" runat="server" Text="Post" OnClick="postAdButton_Click" />	
 					<div class="clearfix"></div>
 					</form>
 					</div>

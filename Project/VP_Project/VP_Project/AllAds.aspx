@@ -1,11 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="AllAds.aspx.cs" Inherits="VP_Project.AllAds" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebMasterpage.Master" AutoEventWireup="true" CodeBehind="AllAds.aspx.cs" Inherits="VP_Project.AllAds" EnableEventValidation="false"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     All Classified Ads
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+
+<asp:Content ID="Content3" ContentPlaceHolderID="searchBar" runat="server">
+    <asp:TextBox ID="searchTextBox" type="text" placeholder="Search Product" runat="server"></asp:TextBox>
+    <asp:Button ID="searchButton" runat="server" Text="Search"  type="submit" class="btn btn-default" aria-label="Left Align" OnClick="searchButton_Click" />
+		<i class="fa fa-search" aria-hidden="true"> </i>
+</asp:Content>
+
+
+<asp:Content ID="Content4" ContentPlaceHolderID="body" runat="server">
     <!-- breadcrumbs -->
 	<div class="w3layouts-breadcrumbs text-center">
 		<div class="container">
