@@ -11,7 +11,7 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          //  btnSignup_Click(sender, e);
+         
         }
 
         protected void btnSignup_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace VP_Project
 
                 if(DatabaseOps.ConnObject.addUser(userDetails))
                 {
-                    Session["username"] = name ;
+                    Session["user"] = email ;
                     NotifyCustomer notification = new NotifyCustomer();
                     notification.sendEmailNotification(userDetails,email);
                     Response.Redirect("home.aspx");

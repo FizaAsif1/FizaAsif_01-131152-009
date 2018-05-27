@@ -13,12 +13,14 @@ namespace VP_Project
         {
             if(Session["user"]==null)
             {
+                manageButton.Visible = false;
                 signoutButton.Visible = false;
                 signinButton.Visible = true;
                 nameLabel.Text = "";
             }
             else
             {
+                manageButton.Visible = true;
                 signoutButton.Visible = true;
                 signinButton.Visible = false;
                 nameLabel.Text = DatabaseOps.ConnObject.getUsername(Session["user"].ToString());
@@ -34,6 +36,11 @@ namespace VP_Project
         protected void signinButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/signin.aspx");
+        }
+
+        protected void manageButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ManageAds.aspx");
         }
     }
 }

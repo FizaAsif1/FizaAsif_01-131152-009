@@ -11,6 +11,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="searchBar" runat="server">
     <asp:TextBox ID="searchTextBox" type="text" placeholder="Search Product" runat="server"></asp:TextBox>
     <asp:Button ID="searchButton" runat="server" Text="Search"  type="submit" class="btn btn-default" aria-label="Left Align" OnClick="searchButton_Click" />
+    
 		<i class="fa fa-search" aria-hidden="true"> </i>
     
 
@@ -22,34 +23,11 @@
 			<ul class="rslides" id="slider">
 				<li>
 					<div class="w3ls-slide-text">
-						<h3>Sell or Advertise anything online</h3>
-						<a href="categories.html" class="w3layouts-explore-all">Browse all Categories</a>
+						<h3>Sell Mobiles Online</h3>
+						<a href="AllAds.aspx" class="w3layouts-explore-all">Browse all Ads</a>
 					</div>
 				</li>
-				<li>
-					<div class="w3ls-slide-text">
-						<h3>Find the Best Deals Here</h3>
-						<a href="categories.html" class="w3layouts-explore">Explore</a>
-					</div>
-				</li>
-				<li>
-					<div class="w3ls-slide-text">
-						<h3>Lets build the home of your dreams</h3>
-						<a href="real-estate.html" class="w3layouts-explore">Explore</a>
-					</div>
-				</li>
-				<li>
-					<div class="w3ls-slide-text">
-						<h3>Find your dream ride</h3>
-						<a href="bikes.html" class="w3layouts-explore">Explore</a>
-					</div>
-				</li>
-				<li>
-					<div class="w3ls-slide-text">
-						<h3>The Easiest Way to get a Job</h3>
-						<a href="jobs.html" class="w3layouts-explore">Find a Job</a>
-					</div>
-				</li>
+				
 			</ul>
 		</div>
 		<!-- //Slider -->
@@ -62,16 +40,15 @@
 				<div class="agile-trend-ads">
 					<h2>Mobiles</h2>
 							<ul id="flexiselDemo3">
-
-
+                                
                                 <asp:ListView ID="mobileList" runat="server">
                                 <ItemTemplate>
 								<li>
 									<div class="col-md-3 biseller-column">
-										<a href="SingleItem.aspx">
+										<a href="SingleItem.aspx?image="<%#Eval("id")%> ">
 											<img src="<%# Eval("image") %>" alt="" />
 											<span class="price"><%# Eval("price") %> PKR</span>
-										</a> 
+										</a>
 										<div class="w3-ad-info">
 											<h5><%# Eval("name") %></h5>
 											<span><%# Eval("date") %></span>

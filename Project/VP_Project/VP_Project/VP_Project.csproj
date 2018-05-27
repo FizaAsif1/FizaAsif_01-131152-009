@@ -69,6 +69,7 @@
     <Content Include="AllAds.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="ManageAds.aspx" />
     <Content Include="packages.config" />
     <Content Include="upload.php" />
     <None Include="Web.Debug.config">
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAds.aspx.cs">
+      <DependentUpon>ManageAds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageAds.aspx.designer.cs">
+      <DependentUpon>ManageAds.aspx</DependentUpon>
     </Compile>
     <Compile Include="NotifyCustomer.cs" />
     <Compile Include="PostAd.aspx.cs">

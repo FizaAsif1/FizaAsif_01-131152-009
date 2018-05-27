@@ -131,15 +131,73 @@ namespace VP_Project
             return mobileDataTable;
         }
 
-        public bool postAd(string values)
+
+        public DataTable getLocations()
+        {
+            DataTable locationDataTable = new DataTable();
+            try
+            {
+                if (IsConnect())
+                {
+                    string query = "select * from locationTable;";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, sqlconnection);
+                    sda.Fill(locationDataTable);
+                    return locationDataTable;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return locationDataTable;
+        }
+
+
+        public DataTable getAdDetails(int id)
+        {
+            DataTable adDetailDataTable = new DataTable();
+            try
+            {
+                if (IsConnect())
+                {
+                    string query = "select * from mobile_ads where id='"+id+"';";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, sqlconnection);
+                    sda.Fill(adDetailDataTable);
+                    return adDetailDataTable;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return adDetailDataTable;
+        }
+
+
+
+        public bool postAd(string name, string brand, string image, int price, string date, string location, string title, string description, string condition, string userID)
         {
             try
             {
                 if (IsConnect())
                 {
-                    string query = "insert into mobile_ads values (@values);";
+                    string query = "insert into mobile_ads values (@name, @brand, @image, @price, @date, @location, @title, @description, @condition, @userID);";
                     SqlCommand cmd = new SqlCommand(query, sqlconnection);
-                    cmd.Parameters.AddWithValue("@alues", values);
+                    cmd.Parameters.AddWithValue("@name", name);
+                    cmd.Parameters.AddWithValue("@brand", brand);
+                    cmd.Parameters.AddWithValue("@image", image);
+                    cmd.Parameters.AddWithValue("@price", price);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@location", location);
+                    cmd.Parameters.AddWithValue("@title", title);
+                    cmd.Parameters.AddWithValue("@description", description);
+                    cmd.Parameters.AddWithValue("@condition", condition);
+                    cmd.Parameters.AddWithValue("@userID", userID);
+
                     string output = cmd.ExecuteNonQuery().ToString();
                     if (output == "1")
                         return true;
@@ -220,26 +278,26 @@ namespace VP_Project
         }
 
 
-        public bool searchByLocation(string condition)
+        public DataTable searchByLocation(string location)
         {
+            DataTable adsByLOcation = new DataTable();
             try
             {
                 if (IsConnect())
                 {
-                    string query = "select * from mobile_ads where location is like ?condition ;";
-                    SqlCommand cmd = new SqlCommand(query, sqlconnection);
-                    cmd.Parameters.AddWithValue("?condition", condition);
-
-                    string output = cmd.ExecuteNonQuery().ToString();
-                    if (output == "-1")
-                        return true;
+                    string query = "select * from mobile_ads where location='"+location+"';";
+                    SqlDataAdapter sda = new SqlDataAdapter(query, sqlconnection);
+                    sda.Fill(adsByLOcation);
+                    return adsByLOcation;
                 }
-                return false;
+
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+
+            return adsByLOcation;
 
         }
 

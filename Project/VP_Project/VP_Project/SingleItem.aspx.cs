@@ -11,7 +11,8 @@ namespace VP_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ListView.DataSource = DatabaseOps.ConnObject.getAdDetails(/*Convert.ToInt32(Request.QueryString["image"].ToString())*/1);
+            ListView.DataBind();
         }
     }
 }

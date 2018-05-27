@@ -13,13 +13,22 @@ namespace VP_Project {
     public partial class PostAd {
         
         /// <summary>
-        /// brand control.
+        /// mobileBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList brand;
+        protected global::System.Web.UI.WebControls.DropDownList mobileBrand;
+        
+        /// <summary>
+        /// mobileName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox mobileName;
         
         /// <summary>
         /// adTitle control.
@@ -31,13 +40,31 @@ namespace VP_Project {
         protected global::System.Web.UI.WebControls.TextBox adTitle;
         
         /// <summary>
-        /// TextArea1 control.
+        /// adDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea TextArea1;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea adDescription;
+        
+        /// <summary>
+        /// upload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label upload;
+        
+        /// <summary>
+        /// imageUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload imageUpload;
         
         /// <summary>
         /// productPrice control.
@@ -49,22 +76,31 @@ namespace VP_Project {
         protected global::System.Web.UI.WebControls.TextBox productPrice;
         
         /// <summary>
-        /// condition control.
+        /// productCondition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox condition;
+        protected global::System.Web.UI.WebControls.TextBox productCondition;
         
         /// <summary>
-        /// location control.
+        /// locationLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox location;
+        protected global::System.Web.UI.WebControls.Label locationLabel;
+        
+        /// <summary>
+        /// locationList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList locationList;
         
         /// <summary>
         /// postAdButton control.
