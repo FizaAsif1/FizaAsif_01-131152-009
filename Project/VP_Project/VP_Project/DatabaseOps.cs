@@ -253,6 +253,29 @@ namespace VP_Project
             return emailPassword;
         }
 
+        public int getMobileNumber(string userEmail)
+        {
+            int number =0;
+            try
+            {
+                if (IsConnect())
+                {
+                    string query = "select mobile from RegisteredUsers where email=@email;";
+                    SqlCommand cmd = new SqlCommand(query, sqlconnection);
+                    cmd.Parameters.AddWithValue("@email", userEmail);
+                    number = int.Parse(cmd.ExecuteScalar().ToString());
+
+                    return number;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return number;
+        }
+
 
         public bool searchByBrand(string brandName)
         {

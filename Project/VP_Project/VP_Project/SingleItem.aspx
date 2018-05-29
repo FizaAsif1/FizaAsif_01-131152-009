@@ -19,7 +19,7 @@
 			<span class="agile-breadcrumbs">
 			<a href="Home.aspx"><i class="fa fa-home home_1"></i></a> / 
 			<a href="AllAds.aspx">All Ads</a> / 
-			<span>Car name</span></span>
+			</span>
 		</div>
 	</div>
 	<!-- //breadcrumbs -->
@@ -40,9 +40,9 @@
 
 					<div class="flexslider">
 						<ul class="slides">
-							<li data-thumb="images/ss1.jpg">
-								<img src="<%# Eval("image") %>" />
-							</li>
+							
+								<image src="<%# Eval("image") %>"></image>
+							
 						</ul>
 					</div>
 					<!-- FlexSlider -->
@@ -81,7 +81,10 @@
 					</div>
 					<div class="interested text-center">
 						<h4>Interested in this Ad?<small> Contact the Seller!</small></h4>
-						<p><i class="glyphicon glyphicon-earphone"></i>0000</p>
+						<p><i class="glyphicon glyphicon-earphone"></i>
+                            <asp:Label ID="numberLabel" runat="server" Text="Label"></asp:Label>
+
+						</p>
 					</div>
 						<div class="tips">
 						<h4>Safety Tips for Buyers</h4>

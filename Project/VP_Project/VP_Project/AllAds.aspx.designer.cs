@@ -40,6 +40,15 @@ namespace VP_Project {
         protected global::System.Web.UI.WebControls.DropDownList locationList;
         
         /// <summary>
+        /// searchByLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button searchByLocation;
+        
+        /// <summary>
         /// mobileList control.
         /// </summary>
         /// <remarks>

@@ -13,6 +13,12 @@ namespace VP_Project
         {
             mobileList.DataSource = DatabaseOps.ConnObject.getAllAds();
             mobileList.DataBind();
+           
+        }
+
+        protected void Page_Prerender(object sender, EventArgs e)
+        {
+          
             locationList.DataSource = DatabaseOps.ConnObject.getLocations();
             locationList.DataBind();
         }
@@ -25,6 +31,18 @@ namespace VP_Project
         }
 
         protected void locationList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            mobileList.DataSource = DatabaseOps.ConnObject.searchByLocation(locationList.SelectedItem.Text.ToString().ToLower());
+            mobileList.DataBind();
+        }
+
+        protected void searchByLocation_Click(object sender, EventArgs e)
+        {
+            mobileList.DataSource = DatabaseOps.ConnObject.searchByLocation(locationList.SelectedItem.Text.ToString().ToLower());
+            mobileList.DataBind();
+        }
+
+        protected void locationList_TextChanged(object sender, EventArgs e)
         {
             mobileList.DataSource = DatabaseOps.ConnObject.searchByLocation(locationList.SelectedItem.Text.ToString().ToLower());
             mobileList.DataBind();

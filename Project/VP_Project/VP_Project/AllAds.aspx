@@ -27,66 +27,20 @@
 			<div class="select-box">
 				<div class="select-city-for-local-ads ads-list">
 					<label>Select your city to see local ads</label>
-						<asp:DropDownList ID="locationList" DataTextField="city" runat="server" Width="200" OnSelectedIndexChanged="locationList_SelectedIndexChanged">
+						<asp:DropDownList ID="locationList" DataTextField="city" runat="server" Width="200" OnSelectedIndexChanged="locationList_SelectedIndexChanged" OnTextChanged="locationList_TextChanged">
                         </asp:DropDownList>
+                    <asp:Button ID="searchByLocation" runat="server" Text="search" OnClick="searchByLocation_Click" />
 				</div>
 
-				<div class="search-product ads-list">
-					<label>Search for a specific product</label>
-					<div class="search">
-						<div id="custom-search-input">
-						<div class="input-group">
-							<input type="text" class="form-control input-lg" placeholder="Buscar" />
-							<span class="input-group-btn">
-								<button class="btn btn-info btn-lg" type="button">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</span>
-						</div>
-					</div>
-					</div>
-				</div>
+				
 				<div class="clearfix"></div>
 			</div>
 			
 			<div class="ads-grid">
-				<div class="side-bar col-md-3">
-					<div class="search-hotel">
-					<h3 class="agileits-sear-head">Name contains</h3>
-					<form>
-						<input type="text" value="Product name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Product name...';}" >
-						<input type="submit" value=" ">
-					</form>
-				</div>
 				
 				
-							
 				</div>
-				<div class="w3-brand-select">
-					<h3 class="agileits-sear-head">Brand name</h3>
-					  <select class="selectpicker" data-live-search="true">
-					  <option data-tokens="All">All</option>
-					  <option data-tokens="Asus">Asus</option>
-					  <option data-tokens="Black Berry">Black Berry</option>
-					  <option data-tokens="HTC">HTC</option>
-					  <option data-tokens="Intex">Intex</option>
-					  <option data-tokens="iPhone">iPhone</option>
-					  <option data-tokens="Karbonn">Karbonn</option>
-					  <option data-tokens="Lava">Lava</option>
-					  <option data-tokens="Lenovo">Lenovo</option>
-					  <option data-tokens="LG">LG</option>
-					  <option data-tokens="Mi">Mi</option>
-					  <option data-tokens="Micromax">Micromax</option>
-					  <option data-tokens="Motorola">Motorola</option>
-					  <option data-tokens="Nokia">Nokia</option>
-					  <option data-tokens="Samsung">Samsung</option>
-					  <option data-tokens="Sony">Sony</option>
-					  <option data-tokens="Other Mobiles">Other Mobiles</option>
-					</select>
-				</div>
-				
-				</div>
-				<div class="agileinfo-ads-display col-md-9">
+				<div class="agileinfo-ads-display col-md-12">
 					<div class="wrapper">					
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
 					  <ul id="myTab" class="nav nav-tabs nav-tabs-responsive" role="tablist">
@@ -117,7 +71,7 @@
 
                             <asp:ListView ID="mobileList" runat="server">
                             <ItemTemplate>
-								<a href="SingleItem.aspx?image="<%#Eval("id")%> ">
+								<a href="singleitem.aspx?id="<%# Eval("id")%> ">
 									<li> 
 									<img src="<%# Eval("image") %>" title="" alt="" />
 									<section class="list-left">

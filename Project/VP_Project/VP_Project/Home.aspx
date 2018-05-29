@@ -45,7 +45,7 @@
                                 <ItemTemplate>
 								<li>
 									<div class="col-md-3 biseller-column">
-										<a href="SingleItem.aspx?image="<%#Eval("id")%> ">
+										<a href="SingleItem.aspx?id="<%#Eval("id")%> ">
 											<img src="<%# Eval("image") %>" alt="" />
 											<span class="price"><%# Eval("price") %> PKR</span>
 										</a>
